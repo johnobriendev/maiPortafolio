@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand palette — Blush & Champagne */
+  --color-brand-cream:  #FDF6F0;  /* warm cream white — primary bg */
+  --color-brand-linen:  #F5EBE0;  /* slightly deeper cream — alternate bg */
+  --color-brand-blush:  #F2A7B0;  /* blush pink — highlight / decorative */
+  --color-brand-gold:   #C9956C;  /* champagne gold — primary CTA & accent */
+  --color-brand-dark:   #2D1B2E;  /* deep plum — primary text */
+  --color-brand-muted:  #7A5A7A;  /* muted mauve — secondary text */
+  --color-brand-border: #E8D5C4;  /* warm light border */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-brand-cream text-brand-dark antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
 }
