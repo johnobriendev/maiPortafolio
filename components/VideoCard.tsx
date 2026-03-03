@@ -9,8 +9,9 @@ export default function VideoCard({ video }: { video: VideoItem }) {
         <div className="w-full aspect-[9/16] bg-brand-linen rounded overflow-hidden">
           <video
             src={video.src}
+            poster={video.poster}
             controls
-            preload="metadata"
+            preload="none"
             playsInline
             className="w-full h-full object-cover"
           />

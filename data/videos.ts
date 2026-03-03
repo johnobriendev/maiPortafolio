@@ -7,6 +7,8 @@ export interface VideoItem {
   embedHtml?: string;
   /** For mp4: path relative to /public, e.g. "/videos/reel.mp4" */
   src?: string;
+  /** Thumbnail shown before the video plays — drop images in /public/thumbnails/ */
+  poster?: string;
   /** Shown as a caption below the video */
   caption?: string;
 }
@@ -47,18 +49,19 @@ export const videos: VideoItem[] = [
     id: "video-1",
     type: "mp4",
     src: "/videos/mai1.mp4",
-    
+    poster: "/thumbnails/mai1.png",
   },
   {
     id: "video-2",
     type: "mp4",
     src: "/videos/mai2.mp4",
-    
+    poster: "/thumbnails/mai2.png",
   },
   {
     id: "video-3",
     type: "mp4",
     src: "/videos/mai3.mp4",
+    poster: "/thumbnails/mai3.png",
   },
 
   
